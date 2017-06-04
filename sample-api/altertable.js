@@ -1,7 +1,12 @@
 var mysql = require('mysql');
-var connections = require('connections')
 
-connections.con.connect(function(err) {
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "null"
+});
+
+con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   var sql = "ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";

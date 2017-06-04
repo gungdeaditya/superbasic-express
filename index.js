@@ -1,1 +1,1 @@
-require('./sample-api/createtable')
+require('./sample-sequelize/app')
